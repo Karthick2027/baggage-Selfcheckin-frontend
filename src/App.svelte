@@ -1,13 +1,32 @@
 <script>
-  export let name
+  import Checkout from "./components/Checkout.svelte"
+  import Form from "./components/Form.svelte"
+
+  let hidden = false
+
+  const Checkin = () => {
+    hidden = false
+  }
+  const CheckOut = () => {
+    hidden = true
+  }
 </script>
 
-<main>
-  <h1 class=" p-2 text-center text-3xl text-red-400">Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+<main class="h-screen w-screen bg-slate-100">
+  <div class=" bg-blue-500 p-3 px-10">
+    <nav class=" flex gap-10">
+      <button on:click={Checkin} class="text-xl font-semibold text-white"
+        >Checkin</button>
+      <button on:click={CheckOut} class=" text-xl font-semibold text-white"
+        >CheckOut</button>
+    </nav>
+  </div>
+
+  {#if hidden}
+    <Checkout />
+  {:else}
+    <Form />
+  {/if}
 </main>
 
 <style global lang="postcss">
