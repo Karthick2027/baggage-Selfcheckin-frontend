@@ -12,17 +12,18 @@
   }
 </script>
 
-<main class="h-screen w-screen bg-gradient-to-r from-sky-200 to-lime-200">
-  <!-- <img src="https://wallpaper.dog/large/10792408.jpg" alt="" /> -->
+<!--  -->
+<main
+  class="background h-screen w-screen bg-slate-300 bg-cover bg-fixed bg-center ">
   <div
-    class="bg-gradient-to-rp-3 flex items-center gap-5 bg-gradient-to-r from-sky-400 to-blue-500 px-5 py-2.5 shadow-lg">
+    class="bg-gradient-to-rp-3 flex items-center gap-5 bg-gradient-to-r from-sky-400 to-blue-500 px-5 opacity-75 shadow-lg">
     <div>
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/7/75/Plane1120.png"
-        class="h-10 w-10 rounded"
+        class="h-14 w-14 rounded"
         alt="" />
     </div>
-    <h2 class="  text-3xl font-semibold ">Self Checkin</h2>
+    <h2 class=" text-2xl font-semibold md:text-3xl ">Self Checkin</h2>
     <nav class="ml-auto flex gap-10">
       <button
         on:click={Checkin}
@@ -52,5 +53,8 @@
   }
   h2 {
     font-family: "Orelega One";
+  }
+  .background {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/75/Plane1120.png);
   }
 </style>
