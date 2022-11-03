@@ -1,5 +1,6 @@
 <script>
   import axios from "axios"
+  import Successmsg from "../Components/Successmsg.svelte"
 
   let Flightnumber, Destination
   let selfCheckin = []
@@ -90,7 +91,7 @@
   }
 </script>
 
-<div class="px-10 pt-10">
+<div class="px-10 pb-28 pt-12 lg:pt-10 lg:pb-32 ">
   <div class="w-full lg:w-2/5">
     <form
       on:submit|preventDefault={adddata}
@@ -148,18 +149,13 @@
         Submit</button>
     </form>
     {#if success}
-      <div class=" mt-5 w-full rounded-lg bg-slate-200">
-        <h1 class="mx-5 p-4 text-lg font-semibold ">
-          Succesfully checked in, and your id is: <strong
-            >{selfCheckin._id}</strong>
-        </h1>
-      </div>
+      <Successmsg id={selfCheckin._id} />
     {/if}
   </div>
 </div>
 
 <style>
-  h1 {
+  :global h1 {
     font-family: "Aclonica";
   }
 </style>

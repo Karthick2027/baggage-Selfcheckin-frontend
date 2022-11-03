@@ -1,6 +1,6 @@
 <script>
-  import CheckoutPage from "./components/CheckoutPage.svelte"
-  import Form from "./components/Form.svelte"
+  import CheckoutPage from "./pages/CheckoutPage.svelte"
+  import Form from "./pages/Form.svelte"
 
   let hidden = false
 
@@ -14,7 +14,7 @@
 
 <!--  -->
 <main
-  class="background h-screen w-screen bg-slate-300 bg-cover bg-fixed bg-center ">
+  class="background h-full w-full bg-slate-300 bg-cover bg-fixed bg-center ">
   <div
     class="bg-gradient-to-rp-3 flex items-center gap-5 bg-gradient-to-r from-sky-400 to-blue-500 px-5 opacity-75 shadow-lg">
     <div>
